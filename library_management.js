@@ -79,3 +79,7 @@ class VIPPatron extends Patron {
         }
     }
 }
+
+// Task 5: Handle Books Borrowing and Returning
+
+calculateTotalBooksAvailable() 
