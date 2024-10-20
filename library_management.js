@@ -39,3 +39,25 @@ class Section {
     }
     
 }
+
+// Task 3: Create a Patron Class
+
+class Patron {
+    constructor(name) {
+        this.name = name;
+        this.borrowedBooks = [];
+    }
+    borrowBook(book) {
+        if (book.isAvailable) {
+            book.isAvailable = false;
+            this.borrowedBooks.push(book);
+            console.log(`${this.name} borrowed "${book.title}"`);
+ } else {
+    console.log(`"${book.title}" is already borrowed`);
+ }
+    }
+    returnBook(book){
+        const index = this.borrowedBooks.indexOf(book);
+
+    }
+}
