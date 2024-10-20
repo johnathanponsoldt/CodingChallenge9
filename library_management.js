@@ -17,3 +17,25 @@ class Book {
         this._isAvailable = status;
     }
 }
+
+// Task 2: Create a Section Class
+
+class Section {
+    constructor(name){
+        this.name = name;
+        this.books = [];
+    }
+    addBook(book) {
+        this.books.push(book);
+    }
+    getAvailableBooks() {
+        return this.books.filter(book => book.isAvailable).length; 
+    }
+    listbooks() {
+        return this.books.map(book => {
+            const status = book.isAvailable ? 'Available' : 'Borrowed';
+            return `${book.title} - ${status}`;
+     })
+    }
+    
+}
