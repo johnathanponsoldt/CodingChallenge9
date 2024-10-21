@@ -83,3 +83,21 @@ class VIPPatron extends Patron {
 // Task 5: Handle Books Borrowing and Returning
 
 calculateTotalBooksAvailable() 
+
+// Task 6: Create and Manage Sections and Patrons
+
+const fiction = new Section("fiction");
+const science = new Section("Science");   // Created two new sections
+
+const book1 = new Book("Dracula", "Bram Stoker", "2435641789");
+const book2 = new Book("Silent Spring", "Rachel Carson", "3467800123");
+
+fiction.addBook(book1);
+science.addBook(book2);
+
+const regularPatron = new Patron("Giannis Antekoumpo");
+
+regularPatron.borrowBook(book1);
+vipPatron.borrowBook(book1);
+regularPatron.returnBook(book1);
+fiction.listbooks();
